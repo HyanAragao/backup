@@ -1,31 +1,50 @@
-#include    <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hguilher <hguilher@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/05 07:54:55 by hguilher          #+#    #+#             */
+/*   Updated: 2023/03/08 14:35:31 by hguilher         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_print_comb(void)
+#include <unistd.h>
+
+void	ft_space_line(char a, char b, char c);
+
+void	ft_print_comb(void)
 {
-    char    h;
-    char    g;
-    char    a;
+	char	a;
+	char	b;
+	char	c;
 
-    h = '0';
-    while(h <= '7')
-    {
-        g = h + 1;
-        while(g <= '8')
-        {
-            a = g + 1;
-            while(a <= '9')
-            {
-                write(1, &h, 1);
-                write(1, &g, 1);
-                write(1, &a, 1);
-                if(h != '7')
-                {
-                    write(1, ", ", 2);
-                }
-            a++;
-            }
-        g++;
-        }
-    h++;
-    }
+	a = '0';
+	while (a <= '7')
+	{
+		b = a + 1;
+		while (b <= '8')
+		{
+			c = b + 1;
+			while (c <= '9')
+			{
+				write (1, &a, 1);
+				write (1, &b, 1);
+				write (1, &c, 1);
+				ft_space_line(a, b, c);
+			c++;
+			}
+		b++;
+		}
+	a++;
+	}
+}
+
+void	ft_space_line(char a, char b, char c)
+{
+	if (a != '7' || b != '8' || c != '9')
+	{
+		write (1, ", ", 2);
+	}
 }

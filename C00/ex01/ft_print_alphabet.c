@@ -1,14 +1,25 @@
-#include    <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hguilher <hguilher@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/05 07:50:20 by hguilher          #+#    #+#             */
+/*   Updated: 2023/03/08 14:33:24 by hguilher         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_print_alphabet(void)
+#include <unistd.h>
+
+void	ft_print_alphabet(void)
 {
-    char    c;
+	char	c;
 
-    c = 'a';
-    while (c <= 'z')
-    {
-        write(1, &c, 1);
-        c++;
-    }
-    write(1, "\n", 1);
+	c = 'a';
+	while (c <= 'z')
+	{
+		write(1, &c, 1);
+	c++;
+	}
 }

@@ -1,7 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hguilher <hguilher@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/07 16:25:31 by hguilher          #+#    #+#             */
+/*   Updated: 2023/03/07 16:43:25 by hguilher         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_print_reverse_alphabet(void);
+#include    <unistd.h>
 
-int main(void)
+void	ft_print_reverse_alphabet(void);
+
+int	main(void)
 {
-    ft_print_reverse_alphabet();
+	ft_print_reverse_alphabet();
+}
+
+void	ft_print_reverse_alphabet(void)
+{
+	char	c;
+
+	c = 'z';
+	while (c >= 'a')
+	{
+		write (1, &c, 1);
+	c--;
+	}
 }

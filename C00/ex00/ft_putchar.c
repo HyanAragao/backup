@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hguilher <hguilher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 14:15:15 by hguilher          #+#    #+#             */
-/*   Updated: 2023/03/17 14:15:15 by hguilher         ###   ########.fr       */
+/*   Created: 2023/03/05 07:49:10 by hguilher          #+#    #+#             */
+/*   Updated: 2023/03/08 14:33:01 by hguilher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	write (1, &c, 1);
 }
