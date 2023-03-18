@@ -6,7 +6,7 @@
 /*   By: hguilher <hguilher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:27:28 by hguilher          #+#    #+#             */
-/*   Updated: 2023/03/18 03:09:45 by hguilher         ###   ########.fr       */
+/*   Updated: 2023/03/18 04:04:17 by hguilher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	while (i < n)
 	{
 		dest[i] = '\0';
+		i++;
 	}
 	return (dest);
 }
