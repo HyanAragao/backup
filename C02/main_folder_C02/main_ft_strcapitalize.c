@@ -6,7 +6,7 @@
 /*   By: hguilher <hguilher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 11:18:33 by hguilher          #+#    #+#             */
-/*   Updated: 2023/03/18 04:14:26 by hguilher         ###   ########.fr       */
+/*   Updated: 2023/03/18 04:16:43 by hguilher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strcapitalize(char *str)
 
 int	main(void)
 {
-	char	str[] = "sa/lut, comm;ent tu vas ? 42mo>ts quarante-deux; Cinquante+et+un";
+	char	str[] = "sa/lut, comm;ent tu vas ? 42mo>ts quarante-deux; CinqUante+et+un";
 
 	printf("%s", ft_strcapitalize(str));
 }
