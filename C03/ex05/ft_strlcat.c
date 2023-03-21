@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hguilher <hguilher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/18 16:36:00 by hguilher          #+#    #+#             */
-/*   Updated: 2023/03/20 23:18:03 by hguilher         ###   ########.fr       */
+/*   Created: 2023/03/20 22:32:09 by hguilher          #+#    #+#             */
+/*   Updated: 2023/03/20 23:29:34 by hguilher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,28 +22,31 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strstr(char *str, char *to_find)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int	i;
-	int	j;
-	int	str_len;
-	int	to_find_len;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	dest_len;
+	unsigned int	src_len;
 
-	str_len = ft_strlen(str);
-	to_find_len = ft_strlen(to_find);
 	i = 0;
-	while (i <= str_len - to_find_len)
+	j = 0;
+	dest_len = j;
+	src_len = ft_strlen(src);
+	while (dest[j] != '\0')
 	{
-		j = 0;
-		while (j < to_find_len && str[i + j] == to_find[j])
-		{
-			j++;
-		}
-		if (j == to_find_len)
-		{
-			return (&str[i]);
-		}
-		i++;
+		j++;
 	}
-	return (0);
+	if (size == 0 || size <= dest_len)
+	{
+		return (src_len + size);
+	}
+	while (src[i] != '\0' && i < size - dest_len - 1)
+	{
+		dest[j] = src[i];
+		i++;
+		j++;
+	}
+	dest[j] = '\0';
+	return (dest_len + src_len);
 }
