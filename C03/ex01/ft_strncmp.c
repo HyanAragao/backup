@@ -6,13 +6,17 @@
 /*   By: hguilher <hguilher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 04:22:40 by hguilher          #+#    #+#             */
-/*   Updated: 2023/03/18 04:22:44 by hguilher         ###   ########.fr       */
+/*   Updated: 2023/03/20 22:20:25 by hguilher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2 && n > 0)
+	while (n == 0)
+	{
+		return (0);
+	}
+	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2 && n - 1 > 0)
 	{
 		s1++;
 		s2++;
