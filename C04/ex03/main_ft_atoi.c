@@ -1,11 +1,12 @@
-#include <string.h>
-#include <stdio.h>
-#include <unistd.h>
 #include <limits.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 int	ft_atoi(char *str);
 
-int main() {
+int	main(void)
+{
 	printf("%i\n", ft_atoi("\t\n\v\f\r      23"));
 	printf("%i\n", ft_atoi("     ------+++++---12341"));
 	printf("%i\n", ft_atoi("     ------+++++---123413"));
